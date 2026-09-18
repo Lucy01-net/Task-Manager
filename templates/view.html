@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Task</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Task Details</h1>
+
+    <p><strong>Task:</strong> {{ task.text }}</p>
+
+    <p><strong>Status:</strong>
+        {% if task.completed %}
+            Completed
+        {% else %}
+            Not Completed
+        {% endif %}
+    </p>
+
+    <a href="/">Back</a>
+</div>
+
+</body>
+</html>

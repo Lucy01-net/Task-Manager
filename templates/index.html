@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>My Tasks</h1>
+
+    <p>Logged in as: {{ session.username }}</p>
+
+    <form action="/add" method="POST">
+        <input type="text" name="task" placeholder="New task">
+        <button type="submit">Add</button>
+    </form>
+
+    <ul>
+        {% for task in tasks %}
+            <li class="{% if task.completed %}completed{% endif %}">
+                <span>
+                    {% if task.completed %}
+                        <s>{{ task.text }}</s>
+                    {% else %}
+                        {{ task.text }}
+                    {% endif %}
+                </span>
+
+                <span>
+                    <a href="/view/{{ loop.index0 }}">View</a>
+                    <a href="/complete/{{ loop.index0 }}">
+                        {% if task.completed %}
+                            Unmark
+                        {% else %}
+                            Complete
+                        {% endif %}
+                    </a>
+                    <a href="/edit/{{ loop.index0 }}">Edit</a>
+                    <a href="/delete/{{ loop.index0 }}">Delete</a>
+                </span>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a class="logout" href="/logout">Logout</a>
+</div>
+
+</body>
+</html>

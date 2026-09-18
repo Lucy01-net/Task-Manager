@@ -1,0 +1,32 @@
+{
+    "anne": {
+        "password": "...",
+        "tasks": []
+    },
+    "annie": {
+        "password": "scrypt:32768:8:1$Wccie3ZwoleBw3YQ$f4a3016136c765cd479e731d17bf75174c3145abe1068dfb2cc65b086be67fb6cb2259746de9029fcb6df7b49c74adc6ffd537d5e22063253c2959d0144d4005",
+        "tasks": [
+            {
+                "text": "cook",
+                "completed": false
+            },
+            {
+                "text": "sleep abd",
+                "completed": false
+            },
+            {
+                "text": "dive",
+                "completed": false
+            }
+        ]
+    },
+    "anny": {
+        "password": "scrypt:32768:8:1$as3cd1vaVLYeiW6m$7bd58aa028fd46ed266911b52ee6cd141f7ffec5c8c25a7fee7466af7c3d57713eafc572e30c4fdc036fcde6c8a805f6c31eab3709af69ff424b651685542b5e",
+        "tasks": [
+            {
+                "text": "cook",
+                "completed": false
+            }
+        ]
+    }
+}
